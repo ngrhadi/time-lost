@@ -32,6 +32,8 @@ export const BackgroundBase = styled(Container)(({ theme }) => ({
 	top: 0,
 	left: 0,
 	height: "100%",
+	minWidth: "100%",
+	width: "100vw",
 	padding: theme.spacing(1),
 	textAlign: "center",
 	color: theme.palette.text.primary,
@@ -119,31 +121,32 @@ function App() {
 						sx={{
 							fontWeight: "bold",
 							// color: theme.palette.text.primary,
-							marginLeft: "10px",
+							marginLeft: "25px",
 						}}>
 						TIME LOST
 					</Typography>
 					<ToggleSwitch />
 				</Card>
+
 				<BackgroundBase>
 					<Box sx={{ flexGrow: 1, marginTop: "60px" }}>
 						<Grid container spacing={2}>
 							<Grid item xs={8}>
-								<Item>xs=8</Item>
+								<Item>based on Paper=8</Item>
 							</Grid>
 							<Grid item xs={4}>
-								<Item>xs=4</Item>
+								<Item>based on Paper=4</Item>
 							</Grid>
 							<Grid item xs={4}>
-								<Item>xs=4</Item>
+								<Item>based on Paper=4</Item>
 							</Grid>
 							<Grid item xs={8}>
-								<Item>xs=8</Item>
+								<Item>based on Paper=8</Item>
 							</Grid>
 						</Grid>
 					</Box>
 					<Paper style={{ marginTop: "15px" }}>
-						<Typography variant="h5">This is a sheet of paper.</Typography>
+						<Typography variant="h6">This is a default of paper.</Typography>
 					</Paper>
 				</BackgroundBase>
 			</ThemeProvider>
