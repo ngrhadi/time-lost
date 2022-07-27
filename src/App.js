@@ -15,6 +15,7 @@ import { useSelector, useDispatch } from "react-redux/es/exports";
 import { Typography, Box, Grid } from "@mui/material";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
+import TableShit from "./components/TableShit";
 
 export const Item = styled(Paper)(({ theme }) => ({
 	backgroundColor: theme.palette.background.default,
@@ -31,7 +32,7 @@ export const BackgroundBase = styled(Container)(({ theme }) => ({
 	position: "absolute",
 	top: 0,
 	left: 0,
-	height: "100%",
+	minHeight: "100%",
 	minWidth: "100%",
 	width: "100vw",
 	padding: theme.spacing(1),
@@ -109,9 +110,10 @@ function App() {
 					style={{
 						minHeight: "60px",
 						borderRadius: "0",
+						position: "fixed",
+						minWidth: "100%",
 						display: "flex",
 						flexDirection: "column",
-						// alignItems: "center",
 						justifyContent: "center",
 						marginBottom: "15px",
 					}}>
@@ -120,7 +122,6 @@ function App() {
 						align="left"
 						sx={{
 							fontWeight: "bold",
-							// color: theme.palette.text.primary,
 							marginLeft: "25px",
 						}}>
 						TIME LOST
@@ -148,6 +149,7 @@ function App() {
 					<Paper style={{ marginTop: "15px" }}>
 						<Typography variant="h6">This is a default of paper.</Typography>
 					</Paper>
+					<TableShit />
 				</BackgroundBase>
 			</ThemeProvider>
 		</div>
